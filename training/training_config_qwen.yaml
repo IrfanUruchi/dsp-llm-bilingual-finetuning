@@ -1,0 +1,15 @@
+# training/configs/train_fft_v5.yaml
+dataset_path: "./export/auto_v5/fft/fft_v5.jsonl"
+output_dir: "./training/checkpoints/fft_v5"
+model_name: "Qwen1.5B"
+adapter_type: "QLoRA"
+quantization_bits: 4
+learning_rate: 2e-4
+batch_size: 4
+num_epochs: 3
+gradient_accumulation_steps: 8
+max_seq_length: 512
+warmup_ratio: 0.05
+save_steps: 200
+eval_steps: 100
+seed: 42

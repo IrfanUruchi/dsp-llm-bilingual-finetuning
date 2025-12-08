@@ -1,0 +1,4 @@
+checkpoint: "./training/checkpoints/fft_v5"
+model_name: "Qwen1.5B"
+eval_set: "./data/eval/fft_eval.jsonl"
+expected_metric: "keyword_match"
