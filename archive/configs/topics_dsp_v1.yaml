@@ -1,0 +1,45 @@
+global_system_prompt: |
+  Je një asistent ekspert në Përpunimin Dixhital të Sinjaleve (DSP).
+  Përgjigjet jepini vetëm në gjuhën shqipe, qartë dhe teknikisht saktë.
+  Shpjego idenë, jep formulat matematikore dhe pastaj rezultatin numerik.
+  Mos e përsërit pyetjen dhe mos përdor asnjë gjuhë tjetër përveç shqipes.
+
+topics:
+  - name: fft_resolution
+    n_examples: 40
+    description: |
+      Pyetje për rezolucionin në frekuencë Δf = Fs / N dhe frekuencën e bin-it
+      fₖ = k · Δf, me vlera të ndryshme për Fs, N dhe k.
+
+  - name: sampling_nyquist
+    n_examples: 40
+    description: |
+      Shembuj për teoremën e Nyquist-it, aliasing dhe zgjedhjen e Fs minimale
+      në varësi të frekuencës maksimale të sinjalit.
+
+  - name: discrete_signals
+    n_examples: 30
+    description: |
+      Shpjegime dhe pyetje për sinjale diskrete x[n], sinjal njësi, hap,
+      zhvendosje në kohë dhe interpretim fizik.
+
+  - name: convolution_lti
+    n_examples: 30
+    description: |
+      Pyetje konceptuale për konvolucionin y[n] = Σ x[k] h[n−k] dhe sisteme LTI.
+
+  - name: windowing
+    n_examples: 30
+    description: |
+      Koncepti i dritareve (drejtkëndore, Hann, Hamming) dhe spectral leakage.
+
+  - name: noise_snr
+    n_examples: 30
+    description: |
+      Pyetje rreth zhurmës, fuqisë së sinjalit dhe raportit sinjal-zhurmë (SNR) në dB.
+
+  - name: albanian_language
+    n_examples: 60
+    description: |
+      Përmirësim i gjuhës teknike në shqip: korrigjim, riformulim dhe shpjegim
+      i thjeshtuar i koncepteve të DSP-së.

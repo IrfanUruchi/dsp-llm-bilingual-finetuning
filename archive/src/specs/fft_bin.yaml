@@ -1,0 +1,42 @@
+topic: FFT
+subtopic: bin_index_resolution
+lang_pair: [en, sq]
+types: [numeric, mcq]
+difficulty_buckets:
+  easy: { N: [256, 512], fs: [8000, 44100], f0_ratio: [0.05, 0.25] }
+  medium: { N: [1024, 4096], fs: [22050, 96000], f0_ratio: [0.01, 0.45] }
+  hard: { N: [4096, 16384], fs: [96000, 192000], f0_ratio: [0.005, 0.49] }
+parameters:
+  N: {type: int, from: difficulty_bucket.N}
+  fs: {type: int, from: difficulty_bucket.fs}
+  f0:
+    expr: "round(fs * uniform(f0_ratio[0], f0_ratio[1]), 2)"
+acceptance_tests:
+  - name: nyquist_ok
+    expr: "f0 < fs/2"
+  - name: resolution_sensible
+    expr: "fs/N >= 0.1"
+outputs:
+  required:
+    - python_check: |
+        import math
+        df = fs/N
+        k = round(f0/df)
+        alias = f0 if f0 < fs/2 else fs - (f0 - fs/2)
+        result = {"k": int(k), "df": float(df), "alias": float(alias)}
+rubrics:
+  numeric_tolerance:
+    k: {abs: 0}
+    df: {rel: 1e-6}
+glossary_tags: [FFT, frequency_resolution, bin_index, Nyquist]
+error_models:
+  - name: floor_instead_of_round
+    code: |
+      import math
+      k_wrong = math.floor(f0/(fs/N))
+  - name: off_by_one
+    code: |
+      import math
+      k_wrong = round(f0/(fs/N)) + 1
+bilingual:
+  style: "concise_academic"

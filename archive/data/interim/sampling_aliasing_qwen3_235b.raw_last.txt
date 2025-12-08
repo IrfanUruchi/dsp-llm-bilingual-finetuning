@@ -1,0 +1,161 @@
+[
+  {
+    "id": "dbg_001",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: A signal with frequency f0 = 6000 Hz is sampled at fs = 10000 Hz. I think there is no aliasing because f0 < fs. Teacher: Is this correct?",
+    "response_en": "No, this is incorrect. The Nyquist frequency is fs/2 = 5000 Hz. Since f0 = 6000 Hz > 5000 Hz, aliasing occurs. The alias frequency is |6000 - 10000| = 4000 Hz, but folded: f_alias = fs - f0 = 10000 - 6000 = 4000 Hz. So the reconstructed signal appears as 4000 Hz.",
+    "prompt_sq": "Student: Një sinjal me frekuencë f0 = 6000 Hz mostron me fs = 10000 Hz. Unë mendoj se nuk ka aliasim sepse f0 < fs. Mësues: A është kjo e saktë?",
+    "response_sq": "Jo, kjo nuk është e saktë. Frekuenca Nyquist është fs/2 = 5000 Hz. Meqenëse f0 = 6000 Hz > 5000 Hz, ndodh aliasimi. Frekuenca e aliasimit është |6000 - 10000| = 4000 Hz, por e palosur: f_alias = fs - f0 = 10000 - 6000 = 4000 Hz. Kështu, sinjali i rindërtuar duket si 4000 Hz.",
+    "meta": {
+      "fs": 10000,
+      "f0": 6000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "dbg_002",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: For f0 = 3000 Hz and fs = 8000 Hz, Nyquist is 8000 Hz, so no aliasing. Teacher: What's wrong here?",
+    "response_en": "The error is in computing the Nyquist frequency. It is fs/2 = 4000 Hz, not fs. Since f0 = 3000 Hz < 4000 Hz, there is indeed no aliasing. But your reasoning was flawed — Nyquist is fs/2, not fs.",
+    "prompt_sq": "Student: Për f0 = 3000 Hz dhe fs = 8000 Hz, Nyquist është 8000 Hz, kështu nuk ka aliasim. Mësues: Çfarë është gabim këtu?",
+    "response_sq": "Gabimi është në llogaritjen e frekuencës Nyquist. Ajo është fs/2 = 4000 Hz, jo fs. Meqenëse f0 = 3000 Hz < 4000 Hz, në fakt nuk ka aliasim. Por arsyetimi juaj ishte i gabuar — Nyquist është fs/2, jo fs.",
+    "meta": {
+      "fs": 8000,
+      "f0": 3000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "dbg_003",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: If f0 = 15000 Hz and fs = 20000 Hz, the Nyquist frequency is 10000 Hz. Since f0 > Nyquist, aliasing occurs. The alias is f0 - fs = 15000 - 20000 = -5000 Hz. So it's -5000 Hz. Teacher: Is negative frequency valid?",
+    "response_en": "Aliasing produces a positive alias frequency. The correct formula is f_alias = |f0 - k*fs|, folded into [0, fs/2]. Here, f_alias = fs - f0 = 20000 - 15000 = 5000 Hz. Negative frequencies are not physically meaningful in this context — the aliased signal appears as 5000 Hz.",
+    "prompt_sq": "Student: Nëse f0 = 15000 Hz dhe fs = 20000 Hz, frekuenca Nyquist është 10000 Hz. Meqenëse f0 > Nyquist, ndodh aliasimi. Aliasi është f0 - fs = 15000 - 20000 = -5000 Hz. Kështu është -5000 Hz. Mësues: A është e vlefshme frekuenca negative?",
+    "response_sq": "Aliasimi prodhon një frekuencë pozitive të aliasit. Formula e saktë është f_alias = |f0 - k*fs|, e palosur në [0, fs/2]. Këtu, f_alias = fs - f0 = 20000 - 15000 = 5000 Hz. Frekuencat negative nuk janë fizikisht të domosdoshme në këtë kontekst — sinjali i aliasuar duket si 5000 Hz.",
+    "meta": {
+      "fs": 20000,
+      "f0": 15000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "dbg_004",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: A 7000 Hz signal sampled at 12000 Hz will alias to 7000 - 12000 = -5000 Hz. We take absolute value, so 5000 Hz. Teacher: Is this correct?",
+    "response_en": "Almost correct, but the method is flawed. The alias frequency is min(f0 mod fs, fs - (f0 mod fs)). Here, f0 mod fs = 7000, and since 7000 > fs/2 = 6000, f_alias = fs - f0 = 12000 - 7000 = 5000 Hz. So yes, 5000 Hz is correct, but the reasoning should rely on folding, not just absolute value.",
+    "prompt_sq": "Student: Një sinjal 7000 Hz i mostruar me 12000 Hz do të bëjë alias në 7000 - 12000 = -5000 Hz. Marrim vlerën absolute, kështu 5000 Hz. Mësues: A është kjo e saktë?",
+    "response_sq": "Gati e saktë, por metoda është e gabuar. Frekuenca e aliasit është min(f0 mod fs, fs - (f0 mod fs)). Këtu, f0 mod fs = 7000, dhe meqenëse 7000 > fs/2 = 6000, f_alias = fs - f0 = 12000 - 7000 = 5000 Hz. Pra, po, 5000 Hz është e saktë, por arsyetimi duhet të bazohet në palosje, jo thjesht në vlerën absolute.",
+    "meta": {
+      "fs": 12000,
+      "f0": 7000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "dbg_005",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: For f0 = 4000 Hz and fs = 8000 Hz, Nyquist is 4000 Hz. Since f0 equals Nyquist, aliasing occurs. Teacher: Is this true?",
+    "response_en": "No. When f0 = fs/2 (Nyquist frequency), the signal can still be sampled without aliasing, though reconstruction may be ambiguous. Standard theory says no aliasing occurs at exactly fs/2, but the signal must be sampled in phase. So aliasing does not occur, but caution is needed.",
+    "prompt_sq": "Student: Për f0 = 4000 Hz dhe fs = 8000 Hz, Nyquist është 4000 Hz. Meqenëse f0 është e barabartë me Nyquist, ndodh aliasimi. Mësues: A është e vërtetë kjo?",
+    "response_sq": "Jo. Kur f0 = fs/2 (frekuenca Nyquist), sinjali mund të mostritet pa aliasim, megjithëse rindërtimi mund të jetë i paqartë. Teoria standarde thotë se nuk ndodh aliasim në pikërisht fs/2, por sinjali duhet të mostritet në fazë. Pra, aliasimi nuk ndodh, por duhet kujdes.",
+    "meta": {
+      "fs": 8000,
+      "f0": 4000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "dbg_006",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: If I sample a 1000 Hz signal at fs = 2000 Hz, it's exactly at Nyquist. So no problem. Teacher: Is this safe?",
+    "response_en": "Sampling at exactly fs = 2*f0 is at the Nyquist limit. In theory, it's the minimum rate, but in practice, if the sampling is not in phase (e.g., at zero crossings), the signal may appear as zero. So while no aliasing occurs, it's not reliable. We recommend fs > 2*f0.",
+    "prompt_sq": "Student: Nëse unë mostronjë një sinjal 1000 Hz me fs = 2000 Hz, është pikërisht në Nyquist. Kështu nuk ka problem. Mësues: A është e sigurt kjo?",
+    "response_sq": "Mostrimi pikërisht në fs = 2*f0 është në kufirin Nyquist. Në teori, është shkalla minimale, por në praktikë, nëse mostrimi nuk është në fazë (p.sh., në kalimet e zerove), sinjali mund të duket si zero. Pra, megjithëse nuk ndodh aliasim, nuk është i besueshëm. Rekomandojmë fs > 2*f0.",
+    "meta": {
+      "fs": 2000,
+      "f0": 1000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "dbg_007",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: A 25000 Hz signal sampled at 48000 Hz will not alias because 25000 < 48000. Teacher: What's the error?",
+    "response_en": "The error is using fs instead of fs/2. Nyquist frequency is fs/2 = 24000 Hz. Since f0 = 25000 Hz > 24000 Hz, aliasing occurs. The alias frequency is fs - f0 = 48000 - 25000 = 23000 Hz.",
+    "prompt_sq": "Student: Një sinjal 25000 Hz i mostruar me 48000 Hz nuk do të bëjë alias sepse 25000 < 48000. Mësues: Çfarë është gabimi?",
+    "response_sq": "Gabimi është përdorimi i fs në vend të fs/2. Frekuenca Nyquist është fs/2 = 24000 Hz. Meqenëse f0 = 25000 Hz > 24000 Hz, ndodh aliasimi. Frekuenca e aliasimit është fs - f0 = 48000 - 25000 = 23000 Hz.",
+    "meta": {
+      "fs": 48000,
+      "f0": 25000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "dbg_008",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: For f0 = 1000 Hz, to avoid aliasing, I need fs > 1000 Hz. Teacher: Is this sufficient?",
+    "response_en": "No. To avoid aliasing, fs must be greater than 2*f0 (Nyquist rate). So for f0 = 1000 Hz, fs > 2000 Hz is required. Sampling at fs = 1500 Hz would still cause aliasing.",
+    "prompt_sq": "Student: Për f0 = 1000 Hz, për të shmangur aliasimin, kam nevojë për fs > 1000 Hz. Mësues: A është e mjaftueshme kjo?",
+    "response_sq": "Jo. Për të shmangur aliasimin, fs duhet të jetë më e madhe se 2*f0 (shkalla Nyquist). Pra, për f0 = 1000 Hz, kërkohet fs > 2000 Hz. Mostrimi me fs = 1500 Hz do të shkaktojë ende aliasim.",
+    "meta": {
+      "fs": 1500,
+      "f0": 1000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "dbg_009",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "debug_student",
+    "type": "debug",
+    "system": "Korrigjo gabimin e studentit në lidhje me mostrimin dhe aliasimin.",
+    "prompt_en": "Student: The discrete-time frequency is f0/fs. So for f0 = 6000 Hz and fs = 10000 Hz, it's 0

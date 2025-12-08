@@ -1,0 +1,175 @@
+[
+  {
+    "id": "sa_001",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A continuous-time sinusoid has frequency f0 = 3000 Hz. It is sampled at fs = 8000 Hz. What is the Nyquist frequency? Does aliasing occur? If yes, what is the alias frequency?",
+    "response_en": "Nyquist frequency = fs / 2 = 4000 Hz. Since f0 = 3000 Hz < 4000 Hz, no aliasing occurs. The discrete-time signal has the same frequency, 3000 Hz.",
+    "prompt_sq": "Një sinjal sinusoidal në kohë të vazhdueshme ka frekuencë f0 = 3000 Hz. Ai mostron me frekuencë fs = 8000 Hz. Sa është frekuenca Nyquist? A ndodh aliasimi? Nëse po, sa është frekuenca e aliasimit?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 4000 Hz. Meqenëse f0 = 3000 Hz < 4000 Hz, nuk ndodh aliasim. Sinjali diskret ka të njëjtën frekuencë, 3000 Hz.",
+    "meta": {
+      "fs": 8000,
+      "f0": 3000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "sa_002",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A sinusoid with frequency f0 = 6000 Hz is sampled at fs = 10000 Hz. Compute the Nyquist frequency. Does aliasing occur? If so, what is the alias frequency?",
+    "response_en": "Nyquist frequency = fs / 2 = 5000 Hz. Since f0 = 6000 Hz > 5000 Hz, aliasing occurs. The alias frequency is |6000 - 10000| = 4000 Hz, but folded: f_alias = fs - f0 = 10000 - 6000 = 4000 Hz. However, since 4000 < 5000, the perceived frequency is 4000 Hz.",
+    "prompt_sq": "Një sinjal sinusoidal me frekuencë f0 = 6000 Hz mostron me fs = 10000 Hz. Llogaritni frekuencën Nyquist. A ndodh aliasim? Nëse po, sa është frekuenca e aliasimit?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 5000 Hz. Meqenëse f0 = 6000 Hz > 5000 Hz, ndodh aliasim. Frekuenca e aliasimit është |6000 - 10000| = 4000 Hz, por pas reflektimit: f_alias = fs - f0 = 10000 - 6000 = 4000 Hz. Meqenëse 4000 < 5000, frekuenca e perceptuar është 4000 Hz.",
+    "meta": {
+      "fs": 10000,
+      "f0": 6000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "sa_003",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A signal with frequency f0 = 2500 Hz is sampled at fs = 9000 Hz. What is the Nyquist frequency? Is there aliasing? If not, what is the frequency of the discrete-time signal?",
+    "response_en": "Nyquist frequency = fs / 2 = 4500 Hz. Since f0 = 2500 Hz < 4500 Hz, no aliasing occurs. The discrete-time signal frequency is 2500 Hz.",
+    "prompt_sq": "Një sinjal me frekuencë f0 = 2500 Hz mostron me fs = 9000 Hz. Sa është frekuenca Nyquist? A ka aliasim? Nëse jo, sa është frekuenca e sinjalit diskret?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 4500 Hz. Meqenëse f0 = 2500 Hz < 4500 Hz, nuk ka aliasim. Frekuenca e sinjalit diskret është 2500 Hz.",
+    "meta": {
+      "fs": 9000,
+      "f0": 2500,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "sa_004",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A sinusoid of frequency f0 = 12000 Hz is sampled at fs = 16000 Hz. Compute the Nyquist frequency. Does aliasing occur? If yes, what is the alias frequency?",
+    "response_en": "Nyquist frequency = fs / 2 = 8000 Hz. Since f0 = 12000 Hz > 8000 Hz, aliasing occurs. The alias frequency is f_alias = fs - f0 = 16000 - 12000 = 4000 Hz.",
+    "prompt_sq": "Një sinjal sinusoidal me frekuencë f0 = 12000 Hz mostron me fs = 16000 Hz. Llogaritni frekuencën Nyquist. A ndodh aliasim? Nëse po, sa është frekuenca e aliasimit?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 8000 Hz. Meqenëse f0 = 12000 Hz > 8000 Hz, ndodh aliasim. Frekuenca e aliasimit është f_alias = fs - f0 = 16000 - 12000 = 4000 Hz.",
+    "meta": {
+      "fs": 16000,
+      "f0": 12000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "sa_005",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A continuous-time signal has frequency f0 = 4500 Hz. It is sampled at fs = 44100 Hz. What is the Nyquist frequency? Does aliasing occur?",
+    "response_en": "Nyquist frequency = fs / 2 = 22050 Hz. Since f0 = 4500 Hz < 22050 Hz, no aliasing occurs.",
+    "prompt_sq": "Një sinjal në kohë të vazhdueshme ka frekuencë f0 = 4500 Hz. Ai mostron me fs = 44100 Hz. Sa është frekuenca Nyquist? A ndodh aliasim?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 22050 Hz. Meqenëse f0 = 4500 Hz < 22050 Hz, nuk ndodh aliasim.",
+    "meta": {
+      "fs": 44100,
+      "f0": 4500,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "sa_006",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A sinusoid with frequency f0 = 20000 Hz is sampled at fs = 32000 Hz. Compute the Nyquist frequency. Does aliasing occur? If yes, what is the alias frequency?",
+    "response_en": "Nyquist frequency = fs / 2 = 16000 Hz. Since f0 = 20000 Hz > 16000 Hz, aliasing occurs. The alias frequency is f_alias = fs - f0 = 32000 - 20000 = 12000 Hz.",
+    "prompt_sq": "Një sinjal sinusoidal me frekuencë f0 = 20000 Hz mostron me fs = 32000 Hz. Llogaritni frekuencën Nyquist. A ndodh aliasim? Nëse po, sa është frekuenca e aliasimit?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 16000 Hz. Meqenëse f0 = 20000 Hz > 16000 Hz, ndodh aliasim. Frekuenca e aliasimit është f_alias = fs - f0 = 32000 - 20000 = 12000 Hz.",
+    "meta": {
+      "fs": 32000,
+      "f0": 20000,
+      "frequencies": null,
+      "difficulty": "medium",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "sa_007",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A signal of frequency f0 = 1000 Hz is sampled at fs = 8000 Hz. What is the Nyquist frequency? Is aliasing present?",
+    "response_en": "Nyquist frequency = fs / 2 = 4000 Hz. Since f0 = 1000 Hz < 4000 Hz, no aliasing occurs.",
+    "prompt_sq": "Një sinjal me frekuencë f0 = 1000 Hz mostron me fs = 8000 Hz. Sa është frekuenca Nyquist? A ka aliasim?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 4000 Hz. Meqenëse f0 = 1000 Hz < 4000 Hz, nuk ka aliasim.",
+    "meta": {
+      "fs": 8000,
+      "f0": 1000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "sa_008",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A sinusoid of frequency f0 = 48000 Hz is sampled at fs = 44100 Hz. Compute the Nyquist frequency. Does aliasing occur? If yes, what is the alias frequency?",
+    "response_en": "Nyquist frequency = fs / 2 = 22050 Hz. Since f0 = 48000 Hz > 22050 Hz, aliasing occurs. The alias frequency is f_alias = |f0 - fs| = |48000 - 44100| = 3900 Hz, but correct folding: f_alias = fs - (f0 mod fs) if f0 > fs. Actually, f_alias = |f0 - fs| = 3900 Hz, but since 3900 < 22050, the perceived frequency is 3900 Hz.",
+    "prompt_sq": "Një sinjal sinusoidal me frekuencë f0 = 48000 Hz mostron me fs = 44100 Hz. Llogaritni frekuencën Nyquist. A ndodh aliasim? Nëse po, sa është frekuenca e aliasimit?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 22050 Hz. Meqenëse f0 = 48000 Hz > 22050 Hz, ndodh aliasim. Frekuenca e aliasimit është f_alias = |f0 - fs| = |48000 - 44100| = 3900 Hz, por pas reflektimit: meqenëse 3900 < 22050, frekuenca e perceptuar është 3900 Hz.",
+    "meta": {
+      "fs": 44100,
+      "f0": 48000,
+      "frequencies": null,
+      "difficulty": "hard",
+      "has_aliasing": true
+    }
+  },
+  {
+    "id": "sa_009",
+    "lang_pair": ["en", "sq"],
+    "topic": "sampling_aliasing",
+    "subtopic": "basic_numeric",
+    "type": "numeric",
+    "system": "Llogaritni frekuencën Nyquist dhe kontrolloni nëse ka aliasim.",
+    "prompt_en": "A continuous-time sinusoid has frequency f0 = 7000 Hz. It is sampled at fs = 48000 Hz. What is the Nyquist frequency? Does aliasing occur?",
+    "response_en": "Nyquist frequency = fs / 2 = 24000 Hz. Since f0 = 7000 Hz < 24000 Hz, no aliasing occurs.",
+    "prompt_sq": "Një sinjal sinusoidal në kohë të vazhdueshme ka frekuencë f0 = 7000 Hz. Ai mostron me fs = 48000 Hz. Sa është frekuenca Nyquist? A ndodh aliasim?",
+    "response_sq": "Frekuenca Nyquist = fs / 2 = 24000 Hz. Meqenëse f0 = 7000 Hz < 24000 Hz, nuk ndodh aliasim.",
+    "meta": {
+      "fs": 48000,
+      "f0": 7000,
+      "frequencies": null,
+      "difficulty": "easy",
+      "has_aliasing": false
+    }
+  },
+  {
+    "id": "sa_010",
+    "lang_pair": ["en", "sq"]

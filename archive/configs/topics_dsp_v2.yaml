@@ -1,0 +1,45 @@
+global_system_prompt: |
+  Je një asistent ekspert në Përpunimin Dixhital të Sinjaleve (DSP).
+  Përgjigjet jepini vetëm në gjuhën shqipe, qartë dhe teknikisht saktë.
+  Për çdo pyetje:
+  - Shpjego shkurt idenë kryesore.
+  - Jep formulat matematikore të sakta.
+  - Pastaj llogarit rezultatin numerik kur ka vlera konkrete.
+  Mos e përsërit pyetjen dhe mos përdor gjuhë tjetër përveç shqipes.
+
+topics:
+  - name: fft_resolution
+    n_examples: 40
+    description: |
+      Pyetje ku jepet Fs dhe N dhe kërkohet rezolucioni në frekuencë
+      Δf = Fs / N dhe shpjegimi i kuptimit.
+
+  - name: fft_bin_frequency
+    n_examples: 40
+    description: |
+      Shembuj me fₖ = k · Δf. Jepen Fs, N dhe k, llogaritet Δf dhe fₖ
+      dhe shpjegohet kuptimi i bin-it k.
+
+  - name: nyquist_aliasing
+    n_examples: 40
+    description: |
+      Shembuj që përdorin teoremën e Nyquist-it: Fs_min = 2 · f_max.
+      Shpjego aliasing-un kur Fs < 2 · f_max me shembuj numerikë.
+
+  - name: discrete_signals
+    n_examples: 30
+    description: |
+      Shpjegime dhe ushtrime për sinjale diskrete x[n], impulsin njësi δ[n],
+      sinjalin hap u[n] dhe sinjale të zhvendosura x[n-n0].
+
+  - name: noise_snr_db
+    n_examples: 30
+    description: |
+      Llogaritje të SNR në dB: SNR_dB = 10 log10(Ps/Pn), me shembuj numerikë
+      dhe shpjegim të kuptimit fizik.
+
+  - name: albanian_language_polish
+    n_examples: 40
+    description: |
+      Korrigjim dhe përmirësim i fjalive teknike në shqip që flasin për DSP,
+      duke kthyer fjali të çrregullta në fjali të qarta e gramatikisht të sakta.
