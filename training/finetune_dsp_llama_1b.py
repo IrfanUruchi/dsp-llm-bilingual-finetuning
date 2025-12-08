@@ -15,7 +15,7 @@ from peft import LoraConfig, get_peft_model
 
 @dataclass
 class TrainConfig:
-    base_model: str = "/home/irfanpatka/llm-dsp/datasets/Stackoverflow/Llama-3.2-1B-Instruct"
+    base_model: str = "llm-dsp/datasets/Stackoverflow/Llama-3.2-1B-Instruct"
 
     dataset_path: str = "../datasets/generated/dsp_albanian_v3_hybrid.jsonl"
 
