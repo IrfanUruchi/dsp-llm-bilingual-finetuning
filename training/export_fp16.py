@@ -3,9 +3,9 @@ import json
 import shutil
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-SRC = "/home/irfanpatka/llm-dsp/llm_dsp_english"
-TEMP = "/home/irfanpatka/llm-dsp/llm_dsp_english_noquant"
-DST = "/home/irfanpatka/llm-dsp/llm_dsp_english_fp16"
+SRC = "llm-dsp/llm_dsp_english"
+TEMP = "llm-dsp/llm_dsp_english_noquant"
+DST = "llm-dsp/llm_dsp_english_fp16"
 
 if os.path.exists(TEMP):
     print("[0] Removing old temp folder:", TEMP)
