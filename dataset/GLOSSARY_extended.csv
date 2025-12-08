@@ -1,0 +1,27 @@
+en,sq
+sampling,kampionim
+aliasing,aliasim
+anti-alias filter,filtër anti-alias
+FIR,FIR
+IIR,IIR
+linear phase,fazë lineare
+minimum phase,fazë minimum
+STFT,STFT
+ISTFT,ISTFT
+Welch PSD,PSD e Welshit
+ENBW,ENBW
+Hilbert transform,transformata Hilbert
+analytic signal,sinjal analitik
+group delay,vonesa e grupit
+polyphase,polifazë
+Goertzel,Goertzel
+overlap-add,overlap-add
+overlap-save,overlap-save
+BPSK,BPSK
+SNR,SNR
+ENOB,ENOB
+quantization,kuantizim
+prewarping,para-shtrembërim
+Butterworth,Butterworth
+Chebyshev,Chebyshev
+Elliptic,Elliptik
