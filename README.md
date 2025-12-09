@@ -258,7 +258,8 @@ Both models:
 The complete academic paper for this project, submitted as part of the  
 *Introduction to Data Science* course, is included in the repository:
 
-Irfan_Uruchi_-_Fine-Tuning_Lightweight_Large_Language_Models_for_a_Bilingual_DSP_Teaching_Assistant_-_Introduction_to_Data_Science.pdf
+[View the full research paper here](Irfan_Uruchi_-_Fine-Tuning_Lightweight_Large_Language_Models_for_a_Bilingual_DSP_Teaching_Assistant_-_Introduction_to_Data_Science.pdf)
+
 
 
 The report contains:
