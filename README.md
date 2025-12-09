@@ -14,6 +14,16 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square">
 </p>
 
+<p align="center">
+  <a href="https://huggingface.co/Irfanuruchi/llama_3_2_1B_dsp-llm-bilingual">
+    <img src="https://img.shields.io/badge/🤗%20LLaMA%201B%20DSP-Model-blue?style=flat-square">
+  </a>
+  <a href="https://huggingface.co/Irfanuruchi/qwen2.5-1.5b-dsp-finetuned">
+    <img src="https://img.shields.io/badge/🤗%20Qwen%201.5B%20DSP-Model-green?style=flat-square">
+  </a>
+</p>
+
+
 ---
 
 <p align="center">
