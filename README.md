@@ -1,8 +1,12 @@
 # Fine-Tuning Lightweight Large Language Models for a Bilingual DSP Teaching Assistant
 
 **Author:** Irfan Uruchi  
-**Course:** Introduction to Data Science  
 **Institution:** South East European University  
+**Academic context:** Introduction to Data Science · December 2025
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24425560.svg)](https://doi.org/10.5281/zenodo.24425560)
+
+**Published research report:** [Zenodo](https://doi.org/10.5281/zenodo.24425560) · **DOI:** `10.5281/zenodo.24425560`
 
 ---
 
@@ -41,7 +45,7 @@ The project demonstrates that:
 
 - Small models (1B parameters) can perform well on DSP tasks.
 - High-quality, verified synthetic data is often more important than raw model size.
-- QLoRA enables full fine-tuning within 5–6GB of VRAM.
+- QLoRA enables parameter-efficient fine-tuning within 5–6GB of VRAM.
 - A bilingual assistant is possible even for low-resource languages such as Albanian.
 
 This repository is structured so that all experiments can be reproduced.
@@ -51,7 +55,7 @@ This repository is structured so that all experiments can be reproduced.
 # Key Features
 
 - **Lightweight fine-tuning with QLoRA**  
-  Full model fine-tuning on 5–6GB of VRAM using 4-bit quantisation and LoRA adapters.
+  Parameter-efficient fine-tuning within approximately 5–6 GB of VRAM using 4-bit quantisation and LoRA adapters.
 
 - **Bilingual DSP dataset (EN–SQ)**  
   Includes manually written and synthetic examples aligned across English and Albanian.
@@ -274,6 +278,17 @@ It serves as the formal documentation for this project.
 
 ---
 
+# Citation
+
+The original research report is archived on Zenodo and available under a permanent DOI.
+
+**Uruchi, I. (2025).** *Fine-Tuning Lightweight Large Language Models for a Bilingual DSP Teaching Assistant*. Zenodo.  
+https://doi.org/10.5281/zenodo.24425560
+
+Citation formats, including BibTeX, are available from the [Zenodo publication record](https://zenodo.org/records/24425560).
+
+---
+
 # Future Work
 
 There are several directions in which this project can be extended:
@@ -321,7 +336,10 @@ His feedback helped shape the structure and direction of the work.
 
 # License
 
-This project is open-source and released under the **MIT License**.
+The original source code is distributed under the **MIT License**, as specified in the repository's license file.
 
-You are free to use, modify, and distribute the code as long as the original license terms are respected.
+The accompanying research report is published under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
+**Research report:** https://doi.org/10.5281/zenodo.24425560
+
+Pretrained models, fine-tuned weights, datasets, and third-party dependencies remain subject to their respective licensing terms.
