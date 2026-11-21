@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this research or its implementation, please cite the associated report."
+type: software
+
+title: "Bilingual DSP Teaching Assistant — LLM Fine-Tuning"
+authors:
+  - family-names: Uruchi
+    given-names: Irfan
+    orcid: "https://orcid.org/0009-0000-9036-8172"
+
+repository-code: "https://github.com/IrfanUruchi/dsp-llm-bilingual-finetuning"
+
+preferred-citation:
+  type: report
+  title: "Fine-Tuning Lightweight Large Language Models for a Bilingual DSP Teaching Assistant"
+  authors:
+    - family-names: Uruchi
+      given-names: Irfan
+      orcid: "https://orcid.org/0009-0000-9036-8172"
+  year: 2025
+  publisher: Zenodo
+  doi: "10.5281/zenodo.24425560"
+  url: "https://doi.org/10.5281/zenodo.24425560"
